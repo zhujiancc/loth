@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "loth.rmq", "loth.rmq\loth.rmq.csproj", "{9CD15341-8227-480C-920D-7940C3F69F22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "loth.rmq.test", "loth.rmq.test\loth.rmq.test.csproj", "{EB783CB7-FEEB-4D71-AB14-F4C3A75D531C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "loth.rmq.test", "loth.rmq.test\loth.rmq.test.csproj", "{EB783CB7-FEEB-4D71-AB14-F4C3A75D531C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "loth.cef", "loth.cef\loth.cef.csproj", "{EA809E05-0BD3-48DE-B728-1183485D24CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{EB783CB7-FEEB-4D71-AB14-F4C3A75D531C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB783CB7-FEEB-4D71-AB14-F4C3A75D531C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB783CB7-FEEB-4D71-AB14-F4C3A75D531C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA809E05-0BD3-48DE-B728-1183485D24CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA809E05-0BD3-48DE-B728-1183485D24CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA809E05-0BD3-48DE-B728-1183485D24CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA809E05-0BD3-48DE-B728-1183485D24CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
