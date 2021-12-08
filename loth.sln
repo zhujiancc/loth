@@ -5,13 +5,15 @@ VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "loth.rmq", "loth.rmq\loth.rmq.csproj", "{9CD15341-8227-480C-920D-7940C3F69F22}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "loth.rmq.test", "loth.rmq.test\loth.rmq.test.csproj", "{EB783CB7-FEEB-4D71-AB14-F4C3A75D531C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "loth.cef", "loth.cef\loth.cef.csproj", "{EA809E05-0BD3-48DE-B728-1183485D24CD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "loth.fur", "loth.fur\loth.fur.csproj", "{7F5D8B45-4416-4AAC-9DAC-6335B16591CB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "loth.redis", "loth.redis\loth.redis.csproj", "{D34D9D2B-3F02-45C4-B8F7-5A18CCEA2AA2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "loth.test", "loth.test\loth.test.csproj", "{32FF836A-C84E-4F86-93FC-E0FA55F40773}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "loth.kafka", "loth.kafka\loth.kafka.csproj", "{3AA76A70-0FD1-4A00-A966-DB3BF00AE223}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +25,6 @@ Global
 		{9CD15341-8227-480C-920D-7940C3F69F22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CD15341-8227-480C-920D-7940C3F69F22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CD15341-8227-480C-920D-7940C3F69F22}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EB783CB7-FEEB-4D71-AB14-F4C3A75D531C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EB783CB7-FEEB-4D71-AB14-F4C3A75D531C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EB783CB7-FEEB-4D71-AB14-F4C3A75D531C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EB783CB7-FEEB-4D71-AB14-F4C3A75D531C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EA809E05-0BD3-48DE-B728-1183485D24CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EA809E05-0BD3-48DE-B728-1183485D24CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA809E05-0BD3-48DE-B728-1183485D24CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +37,14 @@ Global
 		{D34D9D2B-3F02-45C4-B8F7-5A18CCEA2AA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D34D9D2B-3F02-45C4-B8F7-5A18CCEA2AA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D34D9D2B-3F02-45C4-B8F7-5A18CCEA2AA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32FF836A-C84E-4F86-93FC-E0FA55F40773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32FF836A-C84E-4F86-93FC-E0FA55F40773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32FF836A-C84E-4F86-93FC-E0FA55F40773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32FF836A-C84E-4F86-93FC-E0FA55F40773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AA76A70-0FD1-4A00-A966-DB3BF00AE223}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AA76A70-0FD1-4A00-A966-DB3BF00AE223}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AA76A70-0FD1-4A00-A966-DB3BF00AE223}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AA76A70-0FD1-4A00-A966-DB3BF00AE223}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

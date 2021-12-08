@@ -1,9 +1,10 @@
+using loth.rmq;
 using RabbitMQ.Client;
 using System;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace loth.rmq.test
+namespace loth.test
 {
     public class UnitTest1
     {
