@@ -1,7 +1,5 @@
-using Furion;
-using Furion.DynamicApiController;
+ï»¿using Furion;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
 
 namespace loth.fur.Controllers
 {
@@ -24,58 +22,11 @@ namespace loth.fur.Controllers
         [HttpGet]
         public string Get()
         {
-            // ²»ÍÆ¼ö²ÉÓÃ´Ë·½Ê½¶ÁÈ¡£¬¸Ã·½Ê½½öÔÚ ConfigureServices Æô¶¯Ê±Ê¹ÓÃ
+            // ä¸æ¨èé‡‡ç”¨æ­¤æ–¹å¼è¯»å–ï¼Œè¯¥æ–¹å¼ä»…åœ¨ ConfigureServices å¯åŠ¨æ—¶ä½¿ç”¨
             var appInfo = App.GetConfig<AppInfoOptions>("AppInfo", true);
-            return $@"Ãû³Æ£º{appInfo.Name}£¬
-                      °æ±¾£º{appInfo.Version}£¬
-                      ¹«Ë¾£º{appInfo.Company}";
-        }
-    }
-
-    [ApiController]
-    [Route("[controller]")]
-    public class FurController : ControllerBase
-    {
-        private readonly AppInfoOptions options1;
-        private readonly AppInfoOptions options2;
-        private readonly AppInfoOptions options3;
-
-        public FurController(
-            IOptions<AppInfoOptions> options
-            , IOptionsSnapshot<AppInfoOptions> optionsSnapshot
-            , IOptionsMonitor<AppInfoOptions> optionsMonitor)
-        {
-            options1 = options.Value;
-            options2 = optionsSnapshot.Value;
-            options3 = optionsMonitor.CurrentValue;
-        }
-
-        [HttpGet]
-        public string Get()
-        {
-            var info1 = $@"Ãû³Æ£º{options1.Name}£¬
-                      °æ±¾£º{options1.Version}£¬
-                      ¹«Ë¾£º{options1.Company}";
-
-            var info2 = $@"Ãû³Æ£º{options2.Name}£¬
-                      °æ±¾£º{options2.Version}£¬
-                      ¹«Ë¾£º{options2.Company}";
-
-            var info3 = $@"Ãû³Æ£º{options3.Name}£¬
-                      °æ±¾£º{options3.Version}£¬
-                      ¹«Ë¾£º{options3.Company}";
-
-            return $"{info1}-{info2}-{info3}";
-        }
-    }
-
-
-    [DynamicApiController]
-    public class FurionAppService
-    {
-        public string Get()
-        {
-            return $"Hello2 {nameof(Furion)}";
+            return $@"åç§°ï¼š{appInfo.Name}ï¼Œ
+                      ç‰ˆæœ¬ï¼š{appInfo.Version}ï¼Œ
+                      å…¬å¸ï¼š{appInfo.Company}";
         }
     }
 }

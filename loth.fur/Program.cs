@@ -6,7 +6,9 @@ var builder = WebApplication.CreateBuilder(args).Inject();
 
 builder.Services.AddControllers().AddInject();
 
-builder.Services.AddConfigurableOptions<AppInfoOptions>();
+builder.Services
+    .AddConfigurableOptions<AppInfoOptions>();
+
 
 builder.Services.AddRemoteRequest();
 

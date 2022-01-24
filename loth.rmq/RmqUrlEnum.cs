@@ -12,6 +12,7 @@ namespace loth.rmq
 		ZhiGua,
 		BStation,
 		JiGua,
-		ZhiGua_New
+		ZhiGua_New,
+		Spider
 	}
 }

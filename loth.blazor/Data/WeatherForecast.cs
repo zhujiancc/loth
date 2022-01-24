@@ -1,4 +1,4 @@
-namespace loth.fur
+namespace loth.blazor.Data
 {
     public class WeatherForecast
     {
