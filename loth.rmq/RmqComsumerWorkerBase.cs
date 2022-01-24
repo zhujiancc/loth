@@ -4,6 +4,7 @@ using RabbitMQ.Client.Events;
 using System;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace loth.rmq
 {
@@ -50,7 +51,7 @@ namespace loth.rmq
         } = false;
 
 
-        protected abstract bool HandleComingMessage(T messageDTO);
+        protected abstract Task<bool> HandleComingMessage(T messageDTO);
 
         public void Start()
         {
@@ -82,7 +83,7 @@ namespace loth.rmq
 
                             Interlocked.Decrement(ref runningCount);
                         };
-                        eventingBasicConsumer.Received += delegate (object ch, BasicDeliverEventArgs ea)
+                        eventingBasicConsumer.Received += async (object ch, BasicDeliverEventArgs ea) =>
                         {
                             if (NeedLog && new Random(30).Next() == 10)
                             {
@@ -95,7 +96,7 @@ namespace loth.rmq
                             {
                                 byte[] bytes = ea.Body.ToArray();
                                 val = JsonConvert.DeserializeObject<T>(Encoding.UTF8.GetString(bytes));
-                                flag = HandleComingMessage(val);
+                                flag =await HandleComingMessage(val);
                             }
                             catch (Exception ex2)
                             {
