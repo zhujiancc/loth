@@ -37,7 +37,7 @@ namespace loth.rmq
                     }
                     catch (Exception ex)
                     {
-                        RmqLogHelper.WriteError("拉取消息异常：" + ex.ToString());
+                        RmqLogHelper.Error("拉取消息异常：" + ex.ToString());
                     }
                     num++;
                 }
@@ -59,7 +59,7 @@ namespace loth.rmq
                     }
                     catch (Exception ex)
                     {
-                        RmqLogHelper.WriteError("拉取消息异常：" + ex.ToString());
+                        RmqLogHelper.Error("拉取消息异常：" + ex.ToString());
                     }
                 }
             }
@@ -87,7 +87,7 @@ namespace loth.rmq
                 }
                 catch (Exception ex)
                 {
-                    RmqLogHelper.WriteError("删除队列异常：" + queueName);
+                    RmqLogHelper.Error("删除队列异常：" + queueName);
                 }
             }
         }

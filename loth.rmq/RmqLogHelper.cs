@@ -3,23 +3,24 @@ using NLog;
 
 namespace loth.rmq
 {
-	public class RmqLogHelper
-	{
-		static RmqLogHelper()
-		{
-			RmqLogHelper.logger4mq = RmqLogManager.Instance.GetLogger("Rmq");
-		}
+    public class RmqLogHelper
+    {
+        private static readonly Logger logger4mq;
 
-		public static void WriteInfo(string info)
-		{
-			RmqLogHelper.logger4mq.Info(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "\r\n" + info);
-		}
+        static RmqLogHelper()
+        {
+            logger4mq = RmqLogManager.Instance.GetLogger("Rmq");
+        }
 
-		public static void WriteError(string error)
-		{
-			RmqLogHelper.logger4mq.Error(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "\r\n" + error);
-		}
+        public static void Info(string info)
+        {
+            logger4mq.Info(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "\r\n" + info);
+        }
 
-		private static Logger logger4mq = null;
-	}
+        public static void Error(string error)
+        {
+            logger4mq.Error(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "\r\n" + error);
+        }
+
+    }
 }

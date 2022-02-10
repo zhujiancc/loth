@@ -38,7 +38,7 @@ namespace loth.rmq
                 }
                 catch (Exception ex2)
                 {
-                    RmqLogHelper.WriteError("数据库心跳检测异常：" + ex2.ToString());
+                    RmqLogHelper.Error("数据库心跳检测异常：" + ex2.ToString());
                 }
             }).Start();
             try
@@ -53,7 +53,7 @@ namespace loth.rmq
             }
             catch (Exception ex)
             {
-                RmqLogHelper.WriteError("基础exchange创建出错：" + ex.ToString());
+                RmqLogHelper.Error("基础exchange创建出错：" + ex.ToString());
             }
         }
 
@@ -73,7 +73,7 @@ namespace loth.rmq
                         this._readWriteLock.EnterWriteLock();
                         IConnection connect = this._factory.CreateConnection();
                         RmqConnect item = new RmqConnect(connect);
-                        RmqLogHelper.WriteInfo("rmq 生成链接,当前连接数:" + this._cList.Count.ToString());
+                        RmqLogHelper.Info("rmq 生成链接,当前连接数:" + this._cList.Count.ToString());
                         this._cList.Add(item);
                         this._cList.RemoveAll((RmqConnect p) => !p.GetRealConnectInfo().IsOpen);
                     }
@@ -123,7 +123,7 @@ namespace loth.rmq
                         }
                         catch (Exception ex)
                         {
-                            RmqLogHelper.WriteInfo("rmq connectcheck 异常，加入到异常连接池:" + ex.ToString());
+                            RmqLogHelper.Info("rmq connectcheck 异常，加入到异常连接池:" + ex.ToString());
                             try
                             {
                                 IConnection realConnectInfo = rmqConnect.GetRealConnectInfo();
@@ -152,7 +152,7 @@ namespace loth.rmq
                     {
                         foreach (RmqConnect item in list)
                         {
-                            RmqLogHelper.WriteError("rmq connectcheck 异常，移除链接:" + this._cList.Remove(item).ToString());
+                            RmqLogHelper.Error("rmq connectcheck 异常，移除链接:" + this._cList.Remove(item).ToString());
                         }
                     }
                     finally

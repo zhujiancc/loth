@@ -9,7 +9,7 @@ namespace loth.rmq
 {
     public abstract class RmqBatchComsumerWorkBase<T>
     {
-        protected string QueueName
+        protected string QueueName 
         {
             get;
             set;
@@ -47,13 +47,13 @@ namespace loth.rmq
         public void Start()
         {
             List<T> list = new List<T>();
-            DateTime t = DateTime.Now.Add(Interval);
+            DateTime intervalTime = DateTime.Now.Add(Interval);
             try
             {
                 RmqConnect connect = RmqConnectPoolFactory.GetClientPool(RmqUrl).GetConnect();
                 using (IModel model = connect.GetChannel())
                 {
-                    while (list.Count < BatchSize && !(DateTime.Now > t))
+                    while (list.Count < BatchSize && !(DateTime.Now > intervalTime))
                     {
                         BasicGetResult basicGetResult = model.BasicGet(QueueName, autoAck: true);
                         if (basicGetResult == null)
@@ -71,7 +71,7 @@ namespace loth.rmq
             }
             catch (Exception ex)
             {
-                RmqLogHelper.WriteError("RmqBatchComsumerWorkBase 异常：" + ex.ToString());
+                RmqLogHelper.Error("RmqBatchComsumerWorkBase 异常：" + ex.ToString());
             }
 
             if (list.Count > 0)
@@ -88,7 +88,7 @@ namespace loth.rmq
             }
             catch (Exception ex)
             {
-                RmqLogHelper.WriteError("InternalHandleComingMessage 消费队列异常：" + ex.Message);
+                RmqLogHelper.Error("InternalHandleComingMessage 消费队列异常：" + ex.Message);
                 return false;
             }
         }

@@ -37,7 +37,7 @@ namespace loth.rmq
             }
             catch (Exception ex)
             {
-                RmqLogHelper.WriteError("InternalHandleComingMessage 消费队列异常：" + ex.Message);
+                RmqLogHelper.Error("InternalHandleComingMessage 消费队列异常：" + ex.Message);
                 return false;
             }
         }

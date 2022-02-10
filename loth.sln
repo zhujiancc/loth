@@ -5,8 +5,6 @@ VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "loth.rmq", "loth.rmq\loth.rmq.csproj", "{9CD15341-8227-480C-920D-7940C3F69F22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "loth.cef", "loth.cef\loth.cef.csproj", "{EA809E05-0BD3-48DE-B728-1183485D24CD}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "loth.fur", "loth.fur\loth.fur.csproj", "{7F5D8B45-4416-4AAC-9DAC-6335B16591CB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "loth.redis", "loth.redis\loth.redis.csproj", "{D34D9D2B-3F02-45C4-B8F7-5A18CCEA2AA2}"
@@ -15,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "loth.test", "loth.test\loth
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "loth.kafka", "loth.kafka\loth.kafka.csproj", "{3AA76A70-0FD1-4A00-A966-DB3BF00AE223}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "loth.blazor", "loth.blazor\loth.blazor.csproj", "{19B1D4C9-C995-4C7A-A4C7-CD90B3EB77A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "loth.blazor", "loth.blazor\loth.blazor.csproj", "{19B1D4C9-C995-4C7A-A4C7-CD90B3EB77A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +25,6 @@ Global
 		{9CD15341-8227-480C-920D-7940C3F69F22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CD15341-8227-480C-920D-7940C3F69F22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CD15341-8227-480C-920D-7940C3F69F22}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EA809E05-0BD3-48DE-B728-1183485D24CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EA809E05-0BD3-48DE-B728-1183485D24CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EA809E05-0BD3-48DE-B728-1183485D24CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EA809E05-0BD3-48DE-B728-1183485D24CD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7F5D8B45-4416-4AAC-9DAC-6335B16591CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7F5D8B45-4416-4AAC-9DAC-6335B16591CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F5D8B45-4416-4AAC-9DAC-6335B16591CB}.Release|Any CPU.ActiveCfg = Release|Any CPU

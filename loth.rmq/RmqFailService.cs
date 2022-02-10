@@ -24,7 +24,7 @@ namespace loth.rmq
 			}
 			catch (Exception ex)
 			{
-				RmqLogHelper.WriteError("FailQueueInit 初始化错误队列异常：" + ex.ToString());
+				RmqLogHelper.Error("FailQueueInit 初始化错误队列异常：" + ex.ToString());
 			}
 		}
 
@@ -36,7 +36,7 @@ namespace loth.rmq
 			}
 			catch (Exception ex)
 			{
-				RmqLogHelper.WriteError("FailSend处理错误消息异常：" + ex.ToString());
+				RmqLogHelper.Error("FailSend处理错误消息异常：" + ex.ToString());
 			}
 		}
 

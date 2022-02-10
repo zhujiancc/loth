@@ -38,7 +38,7 @@ namespace loth.rmq
                 catch (Exception ex)
                 {
                     flag = false;
-                    RmqLogHelper.WriteError("RmqOneMsgComsumerWorkerBase消费队列异常(内部)：" + ex.Message);
+                    RmqLogHelper.Error("RmqOneMsgComsumerWorkerBase消费队列异常(内部)：" + ex.Message);
                 }
                 finally
                 {
@@ -52,7 +52,7 @@ namespace loth.rmq
             }
             catch (Exception ex2)
             {
-                RmqLogHelper.WriteError("RmqOneMsgComsumerWorkerBase消费队列异常：" + ex2.Message);
+                RmqLogHelper.Error("RmqOneMsgComsumerWorkerBase消费队列异常：" + ex2.Message);
             }
         }
 

@@ -78,7 +78,7 @@ namespace loth.rmq
                             Thread.Sleep(3000);
                             if (NeedLog)
                             {
-                                RmqLogHelper.WriteError("rmq 网络连接断开了，重连操作");
+                                RmqLogHelper.Error("rmq 网络连接断开了，重连操作");
                             }
 
                             Interlocked.Decrement(ref runningCount);
@@ -87,7 +87,7 @@ namespace loth.rmq
                         {
                             if (NeedLog && new Random(30).Next() == 10)
                             {
-                                RmqLogHelper.WriteInfo("rmq 消费中");
+                                RmqLogHelper.Info("rmq 消费中");
                             }
 
                             bool flag = true;
@@ -100,7 +100,7 @@ namespace loth.rmq
                             }
                             catch (Exception ex2)
                             {
-                                RmqLogHelper.WriteError("rmq 接收消息异常：" + ex2.ToString());
+                                RmqLogHelper.Error("rmq 接收消息异常：" + ex2.ToString());
                                 flag = false;
                             }
                             finally
@@ -121,7 +121,7 @@ namespace loth.rmq
                     }
                     catch (Exception ex)
                     {
-                        RmqLogHelper.WriteError("rmq  RmqComsumerWorkerBase消费异常：" + ex.ToString());
+                        RmqLogHelper.Error("rmq  RmqComsumerWorkerBase消费异常：" + ex.ToString());
                     }
                 }
 

@@ -35,15 +35,6 @@ namespace loth.test
                     RmqMessageProducer.MessageSend(RmqUrlEnum.XiaoHongShu, exchange, "loth.test", DateTime.Now.Ticks.ToString(), props);
                 }
             });
-
-            var consumer = new RmqQueueCommonOperate<string>(RmqUrlEnum.XiaoHongShu, exchange, queueName);
-            consumer.StartConsumer(t =>
-            {
-                Console.WriteLine(t);
-                return true;
-            });
-
-
         }
     }
 }
