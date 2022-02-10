@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "loth.kafka", "loth.kafka\lo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "loth.blazor", "loth.blazor\loth.blazor.csproj", "{19B1D4C9-C995-4C7A-A4C7-CD90B3EB77A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "loth.es", "loth.es\loth.es.csproj", "{1AB00AD1-E0EF-44DD-96FD-763813512E24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{19B1D4C9-C995-4C7A-A4C7-CD90B3EB77A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19B1D4C9-C995-4C7A-A4C7-CD90B3EB77A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19B1D4C9-C995-4C7A-A4C7-CD90B3EB77A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AB00AD1-E0EF-44DD-96FD-763813512E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AB00AD1-E0EF-44DD-96FD-763813512E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AB00AD1-E0EF-44DD-96FD-763813512E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AB00AD1-E0EF-44DD-96FD-763813512E24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
