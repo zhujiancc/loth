@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\loth.rmq\loth.rmq.csproj" />
+    <ProjectReference Include="..\loth.sugar\loth.sugar.csproj" />
   </ItemGroup>
 
 </Project>
